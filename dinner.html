@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Recipe Finder</h1>
+    
+    <!-- Category Selection -->
+    <div class="category-selection">
+      <label for="category">Choose a Category:</label>
+      <select id="category">
+        <!-- Options will be populated dynamically -->
+      </select>
+    </div>
+    
+    <button id="fetch-recipe">Get Recipe</button>
+    
+    <div id="recipe-container" class="recipe-container">
+      <div class="recipe-card">
+        <img id="recipe-image" src="" alt="Recipe Image" class="recipe-image">
+        <div class="recipe-content">
+          <h2 id="recipe-name"></h2>
+          <p id="recipe-instructions"></p>
+          
+          <!-- Ingredients List -->
+          <h3>Ingredients:</h3>
+          <ul id="ingredients-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
