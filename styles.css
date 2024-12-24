@@ -12,7 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
@@ -23,10 +24,11 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
   font-weight: 600;
@@ -37,6 +39,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 label {
@@ -46,12 +49,14 @@ label {
 }
 
 select {
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
   outline: none;
+  width: 100%;
+  max-width: 300px;
 }
 
 select:focus {
@@ -68,6 +73,8 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
 }
 
 button:hover {
@@ -95,7 +102,7 @@ button:hover {
 
 .recipe-image {
   width: 100%;
-  height: 250px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -140,20 +147,55 @@ ul li::before {
   margin-right: 8px;
 }
 
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
   .container {
     padding: 20px;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   button {
     font-size: 1rem;
+    padding: 12px;
   }
 
   .recipe-card {
     margin-top: 20px;
+  }
+
+  .category-selection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select, button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .recipe-image {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p, h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .recipe-image {
+    height: 180px;
   }
 }
